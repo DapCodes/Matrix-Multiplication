@@ -15,7 +15,7 @@ function multiplyMatrices() {
   for (let i = 0; i < 3; i++) {
     matrixB[i] = [];
     for (let j = 0; j < 3; j++) {
-      matrixB[i][j] = Number(document.getElementById(`b${i}${j}`).value) || 0;
+      matrixB[i][j] = Number(document.getElementById(`b${i}${j}`).value) || 0; 
     }
   }
 
