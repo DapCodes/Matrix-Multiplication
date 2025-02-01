@@ -1,0 +1,126 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Mulish;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+  }
+  
+  h1 {
+    background-image: linear-gradient(to right, #00FF9C, #007bff);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 15px #00FF9C;
+    margin-bottom: 1rem;
+    letter-spacing: 2.5px;
+  }
+  
+
+  h2 {
+    color: #00FF9C;
+    text-shadow: 0 0 15px #00FF9C;
+    margin-bottom: 1rem;
+    letter-spacing: 2.5px;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .matrix {
+    text-align: center;
+  }
+  
+  .matrix table {
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  
+  .matrix input {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+    text-align: center;
+    color: #ffffff;
+    background-color: #1e1e1e;
+    border: 2px solid #16C47F;
+    border-radius: 6px;
+    box-shadow: 0 0 8px #16C47F;
+    outline: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    -moz-appearance: textfield;
+  }
+  
+  .matrix input::-webkit-outer-spin-button,
+  .matrix input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .matrix input:focus {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #16C47F;
+  }
+  
+  .multiple {
+    margin-top: 55px;
+  }
+
+  button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(90deg, #00e0ff, #007bff);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #007bff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px #00e0ff;
+  }
+  
+  .result table {
+    border-collapse: collapse;
+    margin: 35px auto;
+  }
+  
+  .result td {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+    text-align: center;
+    color: #ffffff;
+    background-color: #1e1e1e;
+    border: 2px solid #16C47F;
+    border-radius: 6px;
+    box-shadow: 0 0 10px #007bff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .result td:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #007bff;
+  }
+  
+  @keyframes glow {
+    0%, 100% {
+      box-shadow: 0 0 10px #00e0ff;
+    }
+  }
+  
+  input, td {
+    animation: glow 1.5s infinite ease-in-out;
+  }
+  
