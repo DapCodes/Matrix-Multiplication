@@ -3,7 +3,7 @@ function multiplyMatrices() {
   const matrixB = [];
   const resultMatrix = [];
 
-  // A
+  // Mengambil nilai Matriks A
   for (let i = 0; i < 3; i++) {
     matrixA[i] = [];
     for (let j = 0; j < 3; j++) {
@@ -11,7 +11,7 @@ function multiplyMatrices() {
     }
   }
 
-  // B
+  // Mengambil nilai Matriks B
   for (let i = 0; i < 3; i++) {
     matrixB[i] = [];
     for (let j = 0; j < 3; j++) {
@@ -19,7 +19,7 @@ function multiplyMatrices() {
     }
   }
 
-  // C
+  // Menghitung hasil Matriks C
   for (let i = 0; i < 3; i++) {
     resultMatrix[i] = [];
     for (let j = 0; j < 3; j++) {
@@ -27,7 +27,8 @@ function multiplyMatrices() {
       for (let k = 0; k < 3; k++) {
         resultMatrix[i][j] += matrixA[i][k] * matrixB[k][j];
       }
-      document.getElementById(`r${i}${j}`).textContent = resultMatrix[i][j];
+      // Menyimpan hasil ke dalam input HTML
+      document.getElementById(`r${i}${j}`).value = resultMatrix[i][j];
     }
   }
 }

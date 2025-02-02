@@ -11,9 +11,6 @@
   </head>
   <body>
     <h1>Perkalian Matriks 3×3</h1>
-
-    
-
     <div class="container">
       <div class="matrix">
         <h2>Matriks A</h2>
@@ -69,29 +66,51 @@
     </div>
 
     <button onclick="multiplyMatrices()">Hitung</button>
-
-    <div class="result">
-      <table id="resultMatrix">
+    <div class="matrix" style="margin-top: 30px;">
+      <table id="matrixResult">
         <tbody>
-          <tr>
-            <td id="r00">0</td>
-            <td id="r01">0</td>
-            <td id="r02">0</td>
+          <tr> 
+            <td><input type="number" id="r00" disabled/></td>
+            <td><input type="number" id="r01" disabled/></td>
+            <td><input type="number" id="r02" disabled/></td>
           </tr>
           <tr>
-            <td id="r10">0</td>
-            <td id="r11">0</td>
-            <td id="r12">0</td>
+            <td><input type="number" id="r10" disabled/></td>
+            <td><input type="number" id="r11" disabled/></td>
+            <td><input type="number" id="r12" disabled/></td>
           </tr>
           <tr>
-            <td id="r20">0</td>
-            <td id="r21">0</td>
-            <td id="r22">0</td>
+            <td><input type="number" id="r20" disabled/></td>
+            <td><input type="number" id="r21" disabled/></td>
+            <td><input type="number" id="r22" disabled/></td>
           </tr>
         </tbody>
       </table>
     </div>
+  </div>
 
     <script src="script.js"></script>
   </body>
 </html>
+
+<!-- <div class="result">
+  <table id="resultMatrix">
+    <tbody>
+      <tr>
+        <td id="r00">0</td>
+        <td id="r01">0</td>
+        <td id="r02">0</td>
+      </tr>
+      <tr>
+        <td id="r10">0</td>
+        <td id="r11">0</td>
+        <td id="r12">0</td>
+      </tr>
+      <tr>
+        <td id="r20">0</td>
+        <td id="r21">0</td>
+        <td id="r22">0</td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
