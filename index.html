@@ -1,94 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Perkalian Matriks</title>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perkalian Matriks 3×3</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h1>Perkalian Matriks 3×3</h1>
-    <div class="container">
-      <div class="matrix">
-        <h2>Matriks A</h2>
-        <table id="matrixA">
-          <tbody>
-            <tr>
-              <td><input type="number" id="a00" /></td>
-              <td><input type="number" id="a01" /></td>
-              <td><input type="number" id="a02" /></td>
-            </tr>
-            <tr>
-              <td><input type="number" id="a10" /></td>
-              <td><input type="number" id="a11" /></td>
-              <td><input type="number" id="a12" /></td>
-            </tr>
-            <tr>
-              <td><input type="number" id="a20" /></td>
-              <td><input type="number" id="a21" /></td>
-              <td><input type="number" id="a22" /></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Kalkulator Perkalian Matriks 3×3</h1>
+    
+    <div class="main-container">
+        <div class="matrices-container">
+            <div class="matrix-section">
+                <h2>Matriks A</h2>
+                <table id="matrixA">
+                    <tbody>
+                        <tr>
+                            <td><input type="number" id="a00" placeholder="0" /></td>
+                            <td><input type="number" id="a01" placeholder="0" /></td>
+                            <td><input type="number" id="a02" placeholder="0" /></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" id="a10" placeholder="0" /></td>
+                            <td><input type="number" id="a11" placeholder="0" /></td>
+                            <td><input type="number" id="a12" placeholder="0" /></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" id="a20" placeholder="0" /></td>
+                            <td><input type="number" id="a21" placeholder="0" /></td>
+                            <td><input type="number" id="a22" placeholder="0" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-      <div class="multiple">
-        <h1> 
-            ×
-        </h1>
-      </div>
+            <div class="multiply-symbol">×</div>
 
-      <div class="matrix">
-        <h2>Matriks B</h2>
-        <table id="matrixB">
-          <tbody>
-            <tr> 
-              <td><input type="number" id="b00" /></td>
-              <td><input type="number" id="b01" /></td>
-              <td><input type="number" id="b02" /></td>
-            </tr>
-            <tr>
-              <td><input type="number" id="b10" /></td>
-              <td><input type="number" id="b11" /></td>
-              <td><input type="number" id="b12" /></td>
-            </tr>
-            <tr>
-              <td><input type="number" id="b20" /></td>
-              <td><input type="number" id="b21" /></td>
-              <td><input type="number" id="b22" /></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+            <div class="matrix-section">
+                <h2>Matriks B</h2>
+                <table id="matrixB">
+                    <tbody>
+                        <tr>
+                            <td><input type="number" id="b00" placeholder="0" /></td>
+                            <td><input type="number" id="b01" placeholder="0" /></td>
+                            <td><input type="number" id="b02" placeholder="0" /></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" id="b10" placeholder="0" /></td>
+                            <td><input type="number" id="b11" placeholder="0" /></td>
+                            <td><input type="number" id="b12" placeholder="0" /></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" id="b20" placeholder="0" /></td>
+                            <td><input type="number" id="b21" placeholder="0" /></td>
+                            <td><input type="number" id="b22" placeholder="0" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <button class="calculate-btn" onclick="multiplyMatrices()">
+                Hitung Perkalian
+            </button>
+        </div>
+
+        <div class="result-section">
+            <div class="equals-symbol">=</div>
+            <h2>Hasil (A × B)</h2>
+            <table id="matrixResult" style="margin: 0 auto;">
+                <tbody>
+                    <tr>
+                        <td><input type="number" id="r00" disabled placeholder="0" /></td>
+                        <td><input type="number" id="r01" disabled placeholder="0" /></td>
+                        <td><input type="number" id="r02" disabled placeholder="0" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" id="r10" disabled placeholder="0" /></td>
+                        <td><input type="number" id="r11" disabled placeholder="0" /></td>
+                        <td><input type="number" id="r12" disabled placeholder="0" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" id="r20" disabled placeholder="0" /></td>
+                        <td><input type="number" id="r21" disabled placeholder="0" /></td>
+                        <td><input type="number" id="r22" disabled placeholder="0" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-
-    <button onclick="multiplyMatrices()">Hitung</button>
-    <div class="matrix" style="margin-top: 30px;">
-      <table id="matrixResult">
-        <tbody>
-          <tr> 
-            <td><input type="number" id="r00" disabled/></td>
-            <td><input type="number" id="r01" disabled/></td>
-            <td><input type="number" id="r02" disabled/></td>
-          </tr>
-          <tr>
-            <td><input type="number" id="r10" disabled/></td>
-            <td><input type="number" id="r11" disabled/></td>
-            <td><input type="number" id="r12" disabled/></td>
-          </tr>
-          <tr>
-            <td><input type="number" id="r20" disabled/></td>
-            <td><input type="number" id="r21" disabled/></td>
-            <td><input type="number" id="r22" disabled/></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
 
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
